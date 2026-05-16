@@ -4,6 +4,10 @@
 * Watchdog
 * Behavioral Analysis
 
+## Note
+
+Due to host machine permission restrictions that block access to live network sniffing tools like tcpdump or tshark without root (sudo) privileges, this project utilizes a simulated data pipeline. A custom Python generator script synthesizes a 10-minute network traffic stream into a structured CSV file tracking timestamps and packet volumes. This approach bypasses local environmental constraints while still allowing the core detection script to process time-series windowing, calculate historical baselines, and successfully isolate sustained behavioral anomalies.
+
 
 ## Setup and Installation
 
